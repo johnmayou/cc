@@ -5,8 +5,7 @@ lint:
 	@go vet
 	@golangci-lint run ./...
 
+flint: fmt lint
+
 test:
 	@go test -v ./...
-
-test-cli:
-	@bash ./test.sh
